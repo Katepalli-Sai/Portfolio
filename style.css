@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+nav {
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navsec1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 550;
+  font-size: 20px;
+}
+
+.navsec1 img {
+  border-radius: 40px;
+  transition: transform 0.3s ease;
+}
+
+.navsec1 img:hover {
+  transform: scale(1.1);
+}
+
+.navsec2 > a {
+  text-decoration: none;
+  color: black;
+  margin: 0px 50px 0px 20px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navsec2 > a:hover {
+  color: #00ff66;
+}
+
+.navsec2 > a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0;
+  background: #00ff66;
+  transition: width 0.3s ease;
+}
+
+.navsec2 > a:hover::after {
+  width: 100%;
+}
+
+.section1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 0px 0px 0px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.intro-content {
+  animation: fadeInUp 2s ease-out;
+}
+
+.intro-title {
+  font-size: 60px;
+  font-weight: bold;
+  color: #333;
+}
+
+.intro-description {
+  font-size: 20px;
+  color: #666;
+}
+
+.intro-title .name-highlight {
+  text-decoration: none;
+  text-decoration-thickness: 3px;
+  text-decoration-color: blueviolet;
+}
+
+.sec1headmob {
+  display: none;
+}
+
+.section2 {
+  padding: 90px 50px;
+  background: rgba(162, 194, 232, 0.6);
+}
+
+.section2 h1 {
+  text-align: left;
+}
+
+.section2 p {
+  text-align: justify;
+}
+
+.skill {
+  background-color: rgb(200, 200, 200);
+  padding: 10px 30px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill:hover {
+  background-color: grey;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.section3 {
+  padding: 60px 50px;
+  text-align: center;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px 60px;
+  gap: 40px;
+}
+
+.section4 {
+  padding: 70px;
+  text-align: center;
+}
+
+.project {
+  background-color: rgb(226, 226, 226);
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+  margin: 40px 0px 40px 0px;
+  display: flex;
+  padding: 40px;
+  gap: 90px;
+}
+
+.project > img {
+  border-radius: 10px;
+}
+
+.pcontent > h1 {
+  margin: 0px 0px 30px 0px;
+}
+
+.pcontent {
+  text-align: start;
+  padding: 20px 10px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.flogo {
+  font-size: 30px;
+}
+
+footer > a {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  transition: color 0.3s ease;
+}
+
+footer > a:hover {
+  color: #00ff66;
+}
+
+.section5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+}
+
+.section5 h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.section5 p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.section2 {
+  margin-bottom: 50px;
+}
+
+.section3 {
+  margin-bottom: 50px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 20px 20px;
+  }
+
+  .navsec2,
+  .sec1headlap {
+    display: none;
+  }
+
+  .section1 {
+    padding: 120px 30px 30px 30px;
+  }
+
+  .intro-title {
+    font-size: 35px;
+  }
+
+  .sec1headmob {
+    display: block;
+  }
+
+  .section2 {
+    padding: 20px;
+  }
+
+  .projectsec {
+    padding: 10px;
+  }
+
+  .project {
+    display: block;
+    width: 300px;
+    height: auto;
+  }
+
+  .project > img {
+    height: 200px;
+  }
+
+  footer {
+    display: block;
+  }
+
+  footer > a {
+    display: block;
+    margin: 30px 0px 30px 0px;
+  }
+}
